@@ -136,7 +136,7 @@ function showResult(problem) {
   selected = problem;
   resultEl.hidden = false;
   resultTitle.textContent = problem.title;
-  resultMeta.innerHTML = `<span class="difficulty-${problem.difficulty.toLowerCase()}">${problem.difficulty}</span> · ${problem.category}`;
+  resultMeta.innerHTML = `<span class="difficulty-${problem.difficulty.toLowerCase()}">${problem.difficulty}</span>`;
   resultNeetcode.href = problem.nurl;
   resultLeetcode.href = problem.url;
 
