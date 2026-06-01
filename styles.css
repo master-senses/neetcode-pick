@@ -75,6 +75,8 @@ body {
   position: relative;
   width: min(420px, 88vw);
   aspect-ratio: 1;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 #wheel {
@@ -83,6 +85,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
   transform-origin: center center;
+  pointer-events: none;
 }
 
 .wheel-pointer {
@@ -154,6 +157,11 @@ body {
   border-radius: 14px;
   padding: 1.25rem;
   margin-bottom: 1rem;
+}
+
+.result {
+  position: relative;
+  z-index: 10;
 }
 
 .result h2 {
