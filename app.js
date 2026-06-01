@@ -1,11 +1,8 @@
 const STORAGE_DONE = "ncpick-manual-done";
 const STORAGE_UNDONE = "ncpick-manual-undone";
 
-const DIFF_COLORS = {
-  Easy: "#3dd68c",
-  Medium: "#ffc01e",
-  Hard: "#ff6b6b",
-};
+const WHEEL_SLICE_COLORS = ["#2d3a4f", "#364559"];
+const WHEEL_SLICE_HIGHLIGHT = "#4a5d78";
 
 let problems = [];
 /** @type {Set<string>} */
@@ -102,8 +99,11 @@ function drawWheel(highlightIndex = -1) {
     ctx.arc(cx, cy, radius, start, end);
     ctx.closePath();
 
-    const base = DIFF_COLORS[p.difficulty] || "#8b9cb3";
-    ctx.fillStyle = i === highlightIndex ? base : `${base}99`;
+    const base =
+      i === highlightIndex
+        ? WHEEL_SLICE_HIGHLIGHT
+        : WHEEL_SLICE_COLORS[i % WHEEL_SLICE_COLORS.length];
+    ctx.fillStyle = base;
     ctx.fill();
     ctx.strokeStyle = "#0f1419";
     ctx.lineWidth = 1.5;
