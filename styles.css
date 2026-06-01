@@ -172,26 +172,10 @@ body {
   color: var(--accent);
 }
 
-.meta {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .result-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-
-.difficulty-easy {
-  color: var(--easy);
-}
-.difficulty-medium {
-  color: var(--medium);
-}
-.difficulty-hard {
-  color: var(--hard);
 }
 
 details summary {

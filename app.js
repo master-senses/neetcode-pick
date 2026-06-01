@@ -25,7 +25,6 @@ const spinBtn = document.getElementById("spin-btn");
 const statsEl = document.getElementById("stats");
 const resultEl = document.getElementById("result");
 const resultTitle = document.getElementById("result-title");
-const resultMeta = document.getElementById("result-meta");
 const resultNeetcode = document.getElementById("result-neetcode");
 const resultLeetcode = document.getElementById("result-leetcode");
 const markDoneBtn = document.getElementById("mark-done-btn");
@@ -136,7 +135,6 @@ function showResult(problem) {
   selected = problem;
   resultEl.hidden = false;
   resultTitle.textContent = problem.title;
-  resultMeta.innerHTML = `<span class="difficulty-${problem.difficulty.toLowerCase()}">${problem.difficulty}</span>`;
   resultNeetcode.href = problem.nurl;
   resultLeetcode.href = problem.url;
 
