@@ -183,6 +183,12 @@ body {
   gap: 0.5rem;
 }
 
+.result-actions a {
+  pointer-events: auto;
+  position: relative;
+  z-index: 11;
+}
+
 details summary {
   cursor: pointer;
   font-weight: 600;
